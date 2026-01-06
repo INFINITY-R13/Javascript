@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript User Input</title>
+    <style>
+        body { font-family: verdana; font-size: 1.5em; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1 id="myH1">Welcome</h1>
+    
+    <label>Username: </label>
+    <input id="myText"><br><br>
+    
+    <button id="mySubmit">Submit</button>
+
+    <script>
+        let username;
+
+        // Capture input when button is clicked 
+        document.getElementById("mySubmit").onclick = function() {
+            
+            // Get value from text box 
+            username = document.getElementById("myText").value;
+            
+            // Update the H1 element 
+            document.getElementById("myH1").textContent = `Hello ${username}`;
+            
+            console.log(username);
+        };
+    </script>
+
+</body>
+</html>
