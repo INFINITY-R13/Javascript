@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Arithmetic Operators</title>
+</head>
+<body>
+    <script>
+        let students = 30;
+
+        // --- Basic Operations ---
+        // students = students + 1; // 31
+        // students = students - 1; // 29
+        // students = students * 2; // 60
+        // students = students / 2; // 15
+        // students = students ** 2; // 900
+        // let extraStudents = students % 3; // 0
+
+        // --- Augmented Assignment Operators ---
+        students += 1;  // 31
+        students -= 1;  // 30
+        students *= 2;  // 60
+        students /= 2;  // 30
+        students **= 2; // 900
+        students %= 2;  // 0 (remainder of 900 / 2)
+
+        // Reset for increment/decrement
+        students = 30;
+        students++; // 31
+        students--; // 30
+
+        console.log("Current Students:", students);
+
+        // --- Operator Precedence ---
+        let result1 = 1 + 2 * 3 + 4 ** 2; 
+        console.log("Result 1 (Precedence):", result1); // 23
+
+        let result2 = 12 % 5 + 8 / 2;
+        console.log("Result 2 (Precedence):", result2); // 6
+
+        let result3 = 6 / (2 + 5) ** 2; 
+        console.log("Result 3 (Parentheses):", result3); // 0.122...
+    </script>
+</body>
+</html>
