@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Constants</title>
+    <style>
+        body { font-family: verdana; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1 id="myH1">Enter the radius of a circle:</h1>
+    
+    <label>Radius: </label>
+    <input type="text" id="myText"><br><br>
+    
+    <button id="mySubmit">Submit</button>
+    
+    <h3 id="myH3"></h3>
+
+    <script>
+        // Use const for values that shouldn't change 
+        const PI = 3.14159;
+        let radius;
+        let circumference;
+
+        document.getElementById("mySubmit").onclick = function() {
+            // Get radius from the text box 
+            radius = document.getElementById("myText").value;
+            
+            // Convert to number type 
+            radius = Number(radius);
+
+            // Calculate circumference 
+            circumference = 2 * PI * radius;
+
+            // Display the result 
+            document.getElementById("myH3").textContent = circumference + "cm";
+            
+            // Note: If you try to do PI = 420.69; here, it will cause an error 
+        };
+    </script>
+
+</body>
+</html>
