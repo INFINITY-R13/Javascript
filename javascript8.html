@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Math Object</title>
+</head>
+<body>
+    <script>
+        // --- MATH CONSTANTS ---
+        console.log("PI:", Math.PI); // 3.14159...
+        console.log("Euler's Number (E):", Math.E); // 2.718...
+
+        let x = 3.21;
+        let y = 2;
+        let z;
+
+        // --- ROUNDING METHODS ---
+        z = Math.round(x); // Rounds to nearest: 3
+        console.log("Round 3.21:", z);
+
+        z = Math.floor(3.99); // Rounds down: 3
+        console.log("Floor 3.99:", z);
+
+        z = Math.ceil(3.21); // Rounds up: 4
+        console.log("Ceil 3.21:", z);
+
+        z = Math.trunc(3.21); // Removes decimals: 3
+        console.log("Truncate 3.21:", z);
+
+        // --- POWER & ROOTS ---
+        z = Math.pow(x, y); // x to the power of y (3.21^2)
+        console.log("3.21 to power of 2:", z);
+
+        z = Math.sqrt(81); // Square root: 9
+        console.log("Square root of 81:", z);
+
+        // --- LOGARITHMS & ABSOLUTE ---
+        z = Math.log(10); // Natural log of 10
+        console.log("Natural log of 10:", z);
+
+        z = Math.abs(-3.21); // Absolute value: 3.21
+        console.log("Absolute of -3.21:", z);
+
+        z = Math.sign(-3.21); // Sign: -1 (negative)
+        console.log("Sign of -3.21:", z);
+
+        // --- TRIGONOMETRY (Using Radians) ---
+        z = Math.sin(45);
+        console.log("Sine of 45 (rad):", z);
+        z = Math.cos(45);
+        console.log("Cosine of 45 (rad):", z);
+        z = Math.tan(45);
+        console.log("Tangent of 45 (rad):", z);
+
+        // --- MAX & MIN ---
+        let max = Math.max(x, y, 1); // Finds highest: 3.21
+        let min = Math.min(x, y, 1); // Finds lowest: 1
+        console.log("Max of (3.21, 2, 1):", max);
+        console.log("Min of (3.21, 2, 1):", min);
+
+    </script>
+</body>
+</html>
