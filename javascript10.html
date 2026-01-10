@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript If Statements</title>
+    <style>
+        body {
+            font-family: verdana;
+            font-size: 1.2em;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <label>Enter your age: </label><br>
+    <input type="text" id="myText"><br><br>
+    <button type="submit" id="mySubmit">Submit</button>
+    
+    <p id="resultElement"></p>
+
+    <script>
+        // Selecting DOM elements 
+        const myText = document.getElementById("myText");
+        const mySubmit = document.getElementById("mySubmit");
+        const resultElement = document.getElementById("resultElement");
+
+        let age;
+
+        mySubmit.onclick = function() {
+            // Get value from text box and convert to Number 
+            age = myText.value;
+            age = Number(age);
+
+            // Conditional Logic 
+            if (age >= 100) {
+                resultElement.textContent = `You are too old to enter this site.`;
+            } 
+            else if (age == 0) {
+                resultElement.textContent = `You can't enter. You were just born.`;
+            } 
+            else if (age >= 18) {
+                resultElement.textContent = `You are old enough to enter this site.`;
+            } 
+            else if (age < 0) {
+                resultElement.textContent = `Your age can't be below zero.`;
+            } 
+            else {
+                resultElement.textContent = `You must be 18+ to enter this site.`;
+            }
+        };
+
+        /* ADDITIONAL EXAMPLES:
+           
+           - Nested If:
+             if (age >= 16) {
+                 if (hasLicense) { console.log("You have your license"); }
+                 else { console.log("You do not have your license yet"); }
+             }
+
+           - Booleans:
+             let isStudent = true;
+             if (isStudent) { console.log("You are a student"); }
+        */
+    </script>
+
+</body>
+</html>
