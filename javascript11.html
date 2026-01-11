@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Checked Property</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: verdana;
+            font-size: 1.2em;
+        }
+        #mySubmit {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="myCheckBox">
+    <label for="myCheckBox">Subscribe</label>
+    <br><br>
+
+    <input type="radio" id="visaBtn" name="card">
+    <label for="visaBtn">Visa</label><br>
+    
+    <input type="radio" id="masterCardBtn" name="card">
+    <label for="masterCardBtn">MasterCard</label><br>
+    
+    <input type="radio" id="payPalBtn" name="card">
+    <label for="payPalBtn">PayPal</label><br><br>
+
+    <button id="mySubmit">Submit</button>
+
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+
+    <script>
+        /* JavaScript Logic */
+        const myCheckBox = document.getElementById("myCheckBox");
+        const visaBtn = document.getElementById("visaBtn");
+        const masterCardBtn = document.getElementById("masterCardBtn");
+        const payPalBtn = document.getElementById("payPalBtn");
+        const mySubmit = document.getElementById("mySubmit");
+        const subResult = document.getElementById("subResult");
+        const paymentResult = document.getElementById("paymentResult");
+
+        mySubmit.onclick = function() {
+            
+            // Check Checkbox Status 
+            if(myCheckBox.checked) {
+                subResult.textContent = `You are subscribed!`;
+            } else {
+                subResult.textContent = `You are NOT subscribed!`;
+            }
+
+            // Check Radio Button Status 
+            if(visaBtn.checked) {
+                paymentResult.textContent = `You are paying with Visa`;
+            } else if(masterCardBtn.checked) {
+                paymentResult.textContent = `You are paying with MasterCard`;
+            } else if(payPalBtn.checked) {
+                paymentResult.textContent = `You are paying with PayPal`;
+            } else {
+                paymentResult.textContent = `You must select a payment type`;
+            }
+        }
+    </script>
+
+</body>
+</html>
