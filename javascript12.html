@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Ternary Operator</title>
+</head>
+<body>
+    <script>
+        // --- EXAMPLE 1: Age Check ---
+        let age = 21;
+        let message = age >= 18 ? "You're an adult" : "You're a minor";
+        console.log(message);
+
+
+        // --- EXAMPLE 2: Time Greeting ---
+        let time = 16; // 4 PM
+        let greeting = time < 12 ? "Good morning!" : "Good afternoon!";
+        console.log(greeting);
+
+
+        // --- EXAMPLE 3: Booleans ---
+        let isStudent = true;
+        let studentStatus = isStudent ? "You are a student" : "You are not a student";
+        console.log(studentStatus);
+
+
+        // --- EXAMPLE 4: Challenge Round (Discount) ---
+        let purchaseAmount = 125;
+        // If purchase is $100+, apply 10% discount, else 0%
+        let discount = purchaseAmount >= 100 ? 10 : 0;
+
+        // Calculate total: Amount - (Amount * (Discount / 100))
+        console.log(`Your total is $${purchaseAmount - (purchaseAmount * (discount / 100))}`);
+
+    </script>
+</body>
+</html>
