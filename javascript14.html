@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript String Methods</title>
+</head>
+<body>
+    <script>
+        let userName = "Infinity R13";
+        let phoneNumber = "123-456-7890";
+
+        // --- Basic Methods ---
+        console.log("Length:", userName.length);           
+        console.log("Char at 0:", userName.charAt(0));     
+        console.log("Index of 'f':", userName.indexOf("f")); 
+        console.log("Last Index of 'f':", userName.lastIndexOf("f")); 
+
+        // --- Formatting ---
+        userName = userName.trim();        // Removes extra spaces
+        userName = userName.toUpperCase(); 
+        userName = userName.toLowerCase(); 
+        userName = userName.repeat(3);     // Repeats the string 3 times
+
+        // --- Boolean Checks ---
+        let startsWithSpace = userName.startsWith(" ");
+        let endsWithSpace = userName.endsWith(" ");
+        let includesSpace = userName.includes(" ");
+
+        // --- Replacement & Padding ---
+        phoneNumber = phoneNumber.replaceAll("-", ""); // 1234567890
+        phoneNumber = phoneNumber.padStart(15, "0");   // 000001234567890
+        phoneNumber = phoneNumber.padEnd(20, "0");     // 00000123456789000000
+
+        console.log("Final Phone Number:", phoneNumber);
+    </script>
+</body>
+</html>
