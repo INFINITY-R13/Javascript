@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Strict Equality</title>
+</head>
+<body>
+    <script>
+        // --- 1. EQUALITY OPERATORS ---
+        const PI = 3.14;
+
+        // Comparison Operator (==) - Only compares value
+        if (PI == "3.14") {
+            console.log("Comparison (==): That is PI"); // Executes
+        } else {
+            console.log("Comparison (==): That is NOT PI");
+        }
+
+        // Strict Equality Operator (===) - Compares value AND data type
+        if (PI === "3.14") {
+            console.log("Strict (===): That is PI");
+        } else {
+            console.log("Strict (===): That is NOT PI"); // Executes 
+        }
+
+
+        // --- 2. INEQUALITY OPERATORS ---
+        
+        // Inequality Operator (!=)
+        if (PI != "3.14") {
+            console.log("Inequality (!=): That is NOT PI");
+        } else {
+            console.log("Inequality (!=): That is PI"); // Executes
+        }
+
+        // Strict Inequality Operator (!==) 
+        if (PI !== "3.14") {
+            console.log("Strict Inequality (!==): That is NOT PI"); // Executes 
+        } else {
+            console.log("Strict Inequality (!==): That is PI");
+        }
+    </script>
+</body>
+</html>
