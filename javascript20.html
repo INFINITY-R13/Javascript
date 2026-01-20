@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript For Loops</title>
+</head>
+<body>
+    <script>
+        // --- EXAMPLE 1: Basic Counting ---
+        console.log("Counting 1 to 10:");
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+
+        // --- EXAMPLE 2: Counting by Twos ---
+        console.log("Counting by 2s (2 to 10):");
+        for (let i = 2; i <= 10; i += 2) {
+            console.log(i);
+        }
+
+        // --- EXAMPLE 3: Countdown ---
+        console.log("Countdown:");
+        for (let i = 10; i > 0; i--) {
+            console.log(i);
+        }
+        console.log("Happy New Year!");
+
+        // --- EXAMPLE 4: Continue Keyword (Skip 13) ---
+        console.log("Skipping 13:");
+        for (let i = 1; i <= 20; i++) {
+            if (i == 13) {
+                continue; // Skips this specific iteration
+            }
+            console.log(i);
+        }
+
+        // --- EXAMPLE 5: Break Keyword (Exit at 13) ---
+        console.log("Exiting at 13:");
+        for (let i = 1; i <= 20; i++) {
+            if (i == 13) {
+                break; // Stops the entire loop
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+</html>
