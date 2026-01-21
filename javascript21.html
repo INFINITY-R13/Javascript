@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Number Guessing Game</title>
+</head>
+<body>
+    <script>
+        // --- 1. SETTINGS ---
+        const minNum = 1;
+        const maxNum = 100;
+        const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+
+        let attempts = 0;
+        let guess;
+        let running = true;
+
+        // --- 2. GAME LOOP ---
+        while (running) {
+            
+            guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}`);
+            guess = Number(guess); // Convert string input to number [00:04:21]
+
+            // --- 3. VALIDATION ---
+            if (isNaN(guess)) {
+                window.alert("Please enter a valid number");
+            } 
+            else if (guess < minNum || guess > maxNum) {
+                window.alert("Please enter a valid number within range");
+            } 
+            // --- 4. CHECK GUESS ---
+            else {
+                attempts++;
+                if (guess < answer) {
+                    window.alert("TOO LOW! TRY AGAIN!");
+                } 
+                else if (guess > answer) {
+                    window.alert("TOO HIGH! TRY AGAIN!");
+                } 
+                else {
+                    window.alert(`CORRECT! The answer was ${answer}. It took you ${attempts} attempts.`);
+                    running = false; // Exit the loop
+                }
+            }
+        }
+    </script>
+</body>
+</html>
