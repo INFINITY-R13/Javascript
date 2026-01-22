@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <script>
+        // --- 1. BASIC FUNCTION WITH PARAMETERS ---
+        function happyBirthday(username, age) {
+            console.log("Happy birthday to you!");
+            console.log(`Happy birthday dear ${username}`);
+            console.log(`You are ${age} years old!`);
+        }
+
+        happyBirthday("BroCode", 25);
+        happyBirthday("SpongeBob", 30);
+
+        // --- 2. THE RETURN KEYWORD (Math Examples) ---
+        function add(x, y) {
+            return x + y;
+        }
+        function subtract(x, y) {
+            return x - y;
+        }
+
+        console.log("Add 2+3:", add(2, 3));        // 5
+        console.log("Subtract 10-5:", subtract(10, 5)); // 5
+
+        // --- 3. LOGIC & TERNARY OPERATOR ---
+        function isEven(number) {
+            // Returns true if remainder is 0, else false
+            return number % 2 === 0 ? true : false;
+        }
+
+        console.log("Is 10 even?", isEven(10)); // true
+        console.log("Is 11 even?", isEven(11)); // false
+
+        // --- 4. PRACTICAL EXAMPLE: EMAIL VALIDATION ---
+        function isValidEmail(email) {
+            // Checks if string contains '@' symbol
+            return email.includes("@") ? true : false;
+        }
+
+        console.log("Valid Email (bro@fake.com):", isValidEmail("bro@fake.com")); // true
+        console.log("Valid Email (elonmusk.com):", isValidEmail("elonmusk.com")); // false
+
+    </script>
+</body>
+</html>
