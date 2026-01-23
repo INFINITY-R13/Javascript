@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Variable Scope</title>
+</head>
+<body>
+    <script>
+        // --- GLOBAL SCOPE ---
+        // Accessible from anywhere in the program
+        let x = 3; 
+
+        function function1() {
+            // --- LOCAL SCOPE ---
+            // This 'x' is only known inside function1
+            let x = 1; 
+            console.log("Function 1 (Local):", x); 
+        }
+
+        function function2() {
+            // This 'x' is only known inside function2
+            let x = 2; 
+            console.log("Function 2 (Local):", x);
+        }
+
+        function function3() {
+            // No local 'x' defined here, so it looks to the Global Scope 
+            console.log("Function 3 (Using Global):", x);
+        }
+
+        function1(); // Outputs: 1
+        function2(); // Outputs: 2
+        function3(); // Outputs: 3
+
+        console.log("Global scope check:", x); // Outputs: 3
+
+        // --- ERROR DEMONSTRATION ---
+        function errorExample() {
+            let y = 5;
+        }
+        // console.log(y); // This would cause a ReferenceError: y is not defined
+    </script>
+</body>
+</html>
