@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays</title>
+</head>
+<body>
+    <script>
+        // --- 1. CREATION AND BASIC ACCESS ---
+        let fruits = ["apple", "orange", "banana"];
+
+        // Changing an element 
+        fruits[0] = "coconut"; 
+
+        // --- 2. ARRAY METHODS ---
+        fruits.push("apple");    // Add to end
+        fruits.pop();            // Remove from end
+        fruits.unshift("mango"); // Add to beginning
+        fruits.shift();          // Remove from beginning
+
+        // --- 3. PROPERTIES AND SEARCHING ---
+        let numOfFruits = fruits.length;      // 3
+        let index = fruits.indexOf("banana"); // 2 (or -1 if not found)
+
+        console.log("Number of fruits:", numOfFruits);
+        console.log("Index of banana:", index);
+
+        // --- 4. LOOPING THROUGH ARRAYS ---
+        
+        // Standard For Loop (Forward)
+        console.log("Forward Loop:");
+        for(let i = 0; i < fruits.length; i++){
+            console.log(fruits[i]);
+        }
+
+        // Standard For Loop (Backward) 
+        console.log("Backward Loop:");
+        for(let i = fruits.length - 1; i >= 0; i--){
+            console.log(fruits[i]);
+        }
+
+        // Enhanced For...of Loop 
+        console.log("Enhanced Loop:");
+        for(let fruit of fruits){
+            console.log(fruit);
+        }
+
+        // --- 5. SORTING ---
+        fruits.sort();           // Alphabetical
+        fruits.sort().reverse(); // Reverse Alphabetical
+
+        console.log("Sorted Array:", fruits);
+
+    </script>
+</body>
+</html>
