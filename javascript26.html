@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 2D Arrays</title>
+</head>
+<body>
+    <script>
+        // --- 1. CREATING A 2D ARRAY ---
+        const matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        // --- 2. MODIFYING ELEMENTS ---
+        // Accessing via [row][column] (using 0-based indexing)
+        matrix[0][0] = 'X';
+        matrix[0][1] = 'O';
+        matrix[0][2] = 'X';
+
+        matrix[1][0] = 'O';
+        matrix[1][1] = 'X';
+        matrix[1][2] = 'O';
+
+        matrix[2][0] = 'X';
+        matrix[2][1] = 'O';
+        matrix[2][2] = 'X';
+
+        // --- 3. DYNAMIC ELEMENTS & TYPES ---
+        // Adding a new row with mixed symbols (like a phone pad)
+        matrix.push(['*', 0, '#']);
+
+        // --- 4. PRINTING THE MATRIX ---
+        console.log("Current Matrix State:");
+        
+        for(let row of matrix) {
+            // Join the elements of each row with a space for a grid look
+            const rowString = row.join(" ");
+            console.log(rowString);
+        }
+
+        /* Visual Output in Console:
+           X O X
+           O X O
+           X O X
+           * 0 #
+        */
+    </script>
+</body>
+</html>
