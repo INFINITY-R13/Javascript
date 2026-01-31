@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Spread Operator</title>
+</head>
+<body>
+    <script>
+        // --- 1. MATH OPERATIONS (Unpacking) ---
+        let numbers = [1, 2, 3, 4, 5];
+        let maximum = Math.max(...numbers); // Unpacks to 1, 2, 3, 4, 5
+        let minimum = Math.min(...numbers);
+
+        console.log("Max:", maximum); // 5
+        console.log("Min:", minimum); // 1
+
+
+        // --- 2. STRING MANIPULATION ---
+        let username = "Bro Code";
+        let letters = [...username]; // Spreads string into an array of chars
+        
+        // Joining them back with a dash 
+        console.log("Letters Array:", letters);
+        console.log("Dashed Name:", letters.join("-"));
+
+
+        // --- 3. COPYING & COMBINING ARRAYS ---
+        let fruits = ["apple", "orange", "banana"];
+        let vegetables = ["carrots", "celery", "potatoes"];
+
+        // Create a shallow copy 
+        let newFruits = [...fruits];
+
+        // Combine arrays and add extra elements 
+        let foods = [...fruits, ...vegetables, "eggs", "milk"];
+
+        console.log("New Fruits (Copy):", newFruits);
+        console.log("Combined Foods:", foods);
+
+    </script>
+</body>
+</html>
